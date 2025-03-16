@@ -1,10 +1,10 @@
 pipeline {
     agent any
-    environment {
-        PR_LIST = credentials('PR_LIST')
-        TICKET_NAME = credentials('TICKET_NAME')
-        GITHUB_TOKEN = credentials('GITHUB_TOKEN')
-        RELEASE_NAME = credentials('RELEASE_NAME')
+    parameters {
+        string(name: 'PR_LIST', description: 'Comma-separated PR links')
+        string(name: 'TICKET_NAME', description: 'Ticket link')
+        password(name: 'GITHUB_TOKEN', description: 'GitHub Token')
+        string(name: 'RELEASE_NAME', description: 'Release name in format 2025-R03')
     }
     stages {
         stage('Run Docker Container') {
