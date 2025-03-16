@@ -11,13 +11,13 @@ pipeline {
             steps {
                 script {
                     sh """
-                    docker pull arijitanand/mytestimage:99999
+                    docker pull arijitanand/mytestimage:4200
                     docker run --rm \
                         -e PR_LIST=\$PR_LIST \
                         -e TICKET_NAME=\$TICKET_NAME \
                         -e GITHUB_TOKEN=\$GITHUB_TOKEN \
                         -e RELEASE_NAME=\$RELEASE_NAME \
-                        arijitanand/mytestimage:99999
+                        arijitanand/mytestimage:4200
                     """
                 }
             }
