@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                    docker pull arijitanand/mytestimage:4200
+                    docker pull arijitanand/mytestimage:777
                     docker run --rm \
                         -e PR_LIST=\$PR_LIST \
                         -e TICKET_NAME=\$TICKET_NAME \
