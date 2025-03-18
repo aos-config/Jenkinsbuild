@@ -17,7 +17,7 @@ pipeline {
                         -e TICKET_NAME=\$TICKET_NAME \
                         -e GITHUB_TOKEN=\$GITHUB_TOKEN \
                         -e RELEASE_NAME=\$RELEASE_NAME \
-                        arijitanand/mytestimage:4200
+                        arijitanand/mytestimage:777
                     """
                 }
             }
