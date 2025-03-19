@@ -5,6 +5,7 @@ pipeline {
         string(name: 'TICKET_NAME', description: 'Ticket link')
         password(name: 'GITHUB_TOKEN', description: 'GitHub Token')
         string(name: 'RELEASE_NAME', description: 'Release name in format 2025-R03')
+        string(name: 'ENVIRONMENT_NAME', description: 'Enter the name of the environment')
     }
     stages {
         stage('Run Docker Container') {
